@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:views="clr-namespace:ContentViewProject3.Views"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ContentViewProject3.Views.FastPage">
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding RandomVTuberViewModels}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <views:RandomVTuberView BindingContext="{Binding}"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>
