@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace ContentViewProject3.Models {
-    public class VtuberRandom : BindableBase {
+    public class VTuberRandom : BindableBase {
         public string Name { get => name; set => SetProperty(ref name, value); }
         private string name;
         public int Count { get => count; set => SetProperty(ref count, value); }
@@ -12,7 +12,7 @@ namespace ContentViewProject3.Models {
         
         private readonly int seed;
 
-        public VtuberRandom() {
+        public VTuberRandom() {
             seed = Environment.TickCount;
         }
 
