@@ -4,11 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ContentViewProject3.Views.RandomVTuberView"
-             BackgroundColor="Gray">
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+             x:Class="ContentViewProject3.Views.RandomVTuberView">
+    <StackLayout BackgroundColor="AliceBlue">
         <Label Text="{Binding Count.Value}" />
         <Label Text="{Binding Name.Value}" />
-        <Button Text="抽選" Command="{Binding RundomCommand}" />
+        <Button Text="ランダム抽選ボタン" Command="{Binding RundomCommand}" />
     </StackLayout>
 </ContentView>

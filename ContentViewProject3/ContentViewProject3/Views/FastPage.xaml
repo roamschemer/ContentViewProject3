@@ -7,12 +7,15 @@
              x:Class="ContentViewProject3.Views.FastPage">
     <StackLayout>
         <CollectionView ItemsSource="{Binding RandomVTuberViewModels}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="3" />
+            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <views:RandomVTuberView BindingContext="{Binding}"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
+        <Button Text="全抽選ボタン" Command="{Binding AllRundomCommand}"/>
     </StackLayout>
 </ContentPage>

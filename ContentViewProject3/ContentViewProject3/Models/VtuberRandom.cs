@@ -10,12 +10,6 @@ namespace ContentViewProject3.Models {
         public int Count { get => count; set => SetProperty(ref count, value); }
         private int count;
         
-        private readonly int seed;
-
-        public VTuberRandom() {
-            seed = Environment.TickCount;
-        }
-
         public void RundomNameSet() {
             var a2p = new[] {
                 "九条林檎","九条棗","九条杏子","九条茘枝",
@@ -25,7 +19,7 @@ namespace ContentViewProject3.Models {
                 "結目ユイ","水瀬しあ"
             };
             //抽選
-            Random rnd = new System.Random(seed);
+            var rnd = new Random((int)DateTime.Now.Ticks);
             var no = rnd.Next(0, a2p.Count());
             Name = a2p[no];
             Count++;

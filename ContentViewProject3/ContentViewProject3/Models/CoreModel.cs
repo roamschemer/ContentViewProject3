@@ -9,7 +9,7 @@ namespace ContentViewProject3.Models {
         /// コンストラクタ
         /// </summary>
         /// <param name="i">リストの数</param>
-        public CoreModel(int i = 4) {
+        public CoreModel(int i = 9) {
             var items = Enumerable.Range(0, i).Select(x => new VTuberRandom());
             VTuberRandoms = new ObservableCollection<VTuberRandom>(items);
         }
