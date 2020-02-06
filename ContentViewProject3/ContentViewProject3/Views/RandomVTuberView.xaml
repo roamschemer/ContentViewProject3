@@ -6,8 +6,11 @@
              mc:Ignorable="d"
              x:Class="ContentViewProject3.Views.RandomVTuberView">
     <StackLayout BackgroundColor="AliceBlue">
-        <Label Text="{Binding Count.Value}" />
-        <Label Text="{Binding Name.Value}" />
-        <Button Text="ランダム抽選ボタン" Command="{Binding RundomCommand}" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="推した回数" />
+            <Label Text="{Binding Count.Value}" />
+        </StackLayout>
+        <Label Text="{Binding Name.Value}" TextColor="Red" FontAttributes="Bold"/>
+        <Button Text="推す" Command="{Binding RundomCommand}" />
     </StackLayout>
 </ContentView>

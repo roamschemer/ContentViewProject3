@@ -19,7 +19,7 @@ namespace ContentViewProject3.Models {
                 "結目ユイ","水瀬しあ"
             };
             //抽選
-            var rnd = new Random((int)DateTime.Now.Ticks);
+            var rnd = new Random((int)DateTime.Now.Ticks); //Environment.TickCount; ←※ミリ秒しか取得しないので同時だと同じ値になってしまう！
             var no = rnd.Next(0, a2p.Count());
             Name = a2p[no];
             Count++;

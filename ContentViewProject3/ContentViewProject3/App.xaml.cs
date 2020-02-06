@@ -4,6 +4,10 @@ using ContentViewProject3.ViewModels;
 using ContentViewProject3.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ContentViewProject3.Models;
+using Prism.Unity;
+using Unity.Injection;
+using Unity;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ContentViewProject3 {
@@ -27,6 +31,14 @@ namespace ContentViewProject3 {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<FastPage, FastPageViewModel>();
+
+            // 引数無しでシングルトンならこれ
+            //containerRegistry.RegisterSingleton<CoreModel>();
+            
+            // 引数渡すならこっち
+            var container = containerRegistry.GetContainer();
+            //container.RegisterType<CoreModel>(new InjectionConstructor(20)); // DIに引数付ける
+            container.RegisterSingleton<CoreModel>(new InjectionConstructor(9)); // DIに引数付けてシングルトン
         }
     }
 }

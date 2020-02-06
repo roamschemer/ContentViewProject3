@@ -4,7 +4,8 @@
              xmlns:prism="http://prismlibrary.com"
              xmlns:views="clr-namespace:ContentViewProject3.Views"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="ContentViewProject3.Views.FastPage">
+             x:Class="ContentViewProject3.Views.FastPage"
+             Title="A2P">
     <StackLayout>
         <CollectionView ItemsSource="{Binding RandomVTuberViewModels}">
             <CollectionView.ItemsLayout>
@@ -16,6 +17,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="全抽選ボタン" Command="{Binding AllRundomCommand}"/>
+        <Button Text="全部推す！" Command="{Binding AllRundomCommand}"/>
     </StackLayout>
 </ContentPage>
