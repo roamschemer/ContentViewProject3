@@ -13,7 +13,7 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <views:RandomVTuberView BindingContext="{Binding}"/>
+                    <views:RandomVTuberView BindingContext="{Binding}"/> <!-- ここでViewModelをBinding -->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
