@@ -4,12 +4,12 @@
              xmlns:prism="http://prismlibrary.com"
              xmlns:views="clr-namespace:ContentViewProject3.Views"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="ContentViewProject3.Views.FastPage"
-             Title="FastPage">
+             x:Class="ContentViewProject3.Views.SecondPage"
+             Title="SecondPage">
     <StackLayout>
         <CollectionView ItemsSource="{Binding RandomVTuberViewModels}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="3" />
+                <GridItemsLayout Orientation="Vertical" Span="4" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>

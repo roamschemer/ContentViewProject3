@@ -4,12 +4,13 @@ using System.Linq;
 
 namespace ContentViewProject3.Models {
     public class CoreModel : BindableBase {
-        public ObservableCollection<VTuberRandom> VTuberRandoms { get; }
+        public ObservableCollection<VTuberRandom> VTuberRandoms { get; private set; }
+
         /// <summary>
-        /// コンストラクタ
+        /// リストの数をセットする
         /// </summary>
-        /// <param name="i">リストの数</param>
-        public CoreModel(int i = 9) {
+        /// <param name="i">リスト数</param>
+        public void Set(int i) {
             var items = Enumerable.Range(0, i).Select(x => new VTuberRandom());
             VTuberRandoms = new ObservableCollection<VTuberRandom>(items);
         }

@@ -5,7 +5,8 @@
              Title="MainPage">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Button Text="ContentPage1" Command="{Binding PageNavigationCommand}" CommandParameter="FastPage"/>
+        <Button Text="FastPage" Command="{Binding PageNavigationCommand}" CommandParameter="FastPage"/>
+        <Button Text="SecondPage" Command="{Binding PageNavigationCommand}" CommandParameter="SecondPage"/>
     </StackLayout>
 
 </ContentPage>

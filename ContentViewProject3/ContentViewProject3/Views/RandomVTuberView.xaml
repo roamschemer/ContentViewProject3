@@ -11,6 +11,8 @@
             <Label Text="{Binding Count.Value}" />
         </StackLayout>
         <Label Text="{Binding Name.Value}" TextColor="Red" FontAttributes="Bold"/>
-        <Button Text="推す" Command="{Binding RundomCommand}" />
+        <Frame>
+            <Button Text="推す" Command="{Binding RundomCommand}" BackgroundColor="#BBBBBB"/>
+        </Frame>
     </StackLayout>
 </ContentView>
