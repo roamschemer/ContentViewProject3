@@ -31,15 +31,15 @@ namespace ContentViewProject3 {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<FastPage, FastPageViewModel>();
+            containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
 
             // 引数無しでシングルトンならこれ
-            //containerRegistry.RegisterSingleton<CoreModel>();
+            containerRegistry.RegisterSingleton<CoreModel>();
 
             // 引数渡すならこっち(但し基本的には使わないようにした方が良いと思われる)
             //var container = containerRegistry.GetContainer();
             //container.RegisterType<CoreModel>(new InjectionConstructor(20)); // DIに引数付ける
             //container.RegisterSingleton<CoreModel>(new InjectionConstructor(9)); // DIに引数付けてシングルトン
-            containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
         }
     }
 }

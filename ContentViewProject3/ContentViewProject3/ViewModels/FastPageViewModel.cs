@@ -15,7 +15,7 @@ namespace ContentViewProject3.ViewModels {
 
         public FastPageViewModel(INavigationService navigationService,CoreModel coreModel) : base(navigationService) {
             //個別Viewへ
-            coreModel.Set(9);
+            //coreModel.Set(9);
             RandomVTuberViewModels = coreModel.VTuberRandoms.ToReadOnlyReactiveCollection(x => new RandomVTuberViewModel(x));
             //親からの操作
             AllRundomCommand.Subscribe(_ => { foreach (var x in coreModel.VTuberRandoms) x.RundomNameSet(); });

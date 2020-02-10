@@ -6,6 +6,9 @@ namespace ContentViewProject3.Models {
     public class CoreModel : BindableBase {
         public ObservableCollection<VTuberRandom> VTuberRandoms { get; private set; }
 
+        public CoreModel() {
+            Set(9);
+        }
         /// <summary>
         /// リストの数をセットする
         /// </summary>
